@@ -25,7 +25,7 @@ SECRET_KEY = 'o1w6-jzs(1*w*p@i-uwrk1p=d5tv6vsh+kn9rk9hc__k211!@8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["tentacool.bb.schrodinger.com", "tentacruel.bb.schrodinger.com", "web", 'localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = ["tentacool.bb.schrodinger.com", "tentacruel.bb.schrodinger.com", "web1", 'localhost', '127.0.0.1', '[::1]']
 
 
 # Application definition

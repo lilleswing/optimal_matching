@@ -63,6 +63,7 @@ def show_csv_file(request, csv_id):
   mentees = set([x for x in mentees.values()])
   unused_mentees = mentees - used_mentees
   unused_mentors = mentors - used_mentors
+  table = sorted(table, key=lambda x: x[0])
   context = {
     'table': table,
     'unused_mentors': unused_mentors,

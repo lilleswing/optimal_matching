@@ -1,0 +1,4 @@
+munkres==1.0.12
+Django==1.11
+gunicorn==19.7.1
+psycopg2
