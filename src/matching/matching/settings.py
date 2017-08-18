@@ -26,6 +26,7 @@ SECRET_KEY = 'o1w6-jzs(1*w*p@i-uwrk1p=d5tv6vsh+kn9rk9hc__k211!@8'
 DEBUG = True
 
 ALLOWED_HOSTS = ["tentacool.bb.schrodinger.com", "tentacruel.bb.schrodinger.com", "web1", 'localhost', '127.0.0.1', '[::1]']
+DATA_UPLOAD_MAX_MEMORY_SIZE = 262144000
 
 
 # Application definition
