@@ -21,7 +21,6 @@ from matching import views
 urlpatterns = [
   url(r'^admin/', admin.site.urls),
   url(r'^$', views.index, name='index'),
-  url(r'^(?P<csv_id>[0-9]+)$', views.show_csv_file, name='show_csv_file'),
-
-
+  url(r'^dataset$', views.list_files, name='list_csv_file'),
+  url(r'^dataset/(?P<csv_id>[0-9]+)$', views.show_csv_file, name='show_csv_file'),
 ]

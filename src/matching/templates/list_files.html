@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Previous Uploads</h1>
+    <table id="csv-files-table" class="table table-striped table-bordered table-condensed">
+        <thead>
+        <th>Created</th>
+        </thead>
+        {% for row in csv_files %}
+            <tr>
+                <td><a href={{ row.url }}>{{ row.created }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#csv-files-table').DataTable();
+        });
+    </script>
+{% endblock %}

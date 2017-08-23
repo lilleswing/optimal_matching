@@ -1,3 +1,4 @@
+from django.urls import reverse
 from munkres import Munkres, make_cost_matrix, DISALLOWED
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -15,8 +16,18 @@ def handle_uploaded_file(fin):
 def index(request):
   if request.method == 'POST':
     csv_id = handle_uploaded_file(request.FILES['datafile'])
-    return HttpResponseRedirect('/%d' % csv_id)
+    return HttpResponseRedirect(reverse("show_csv_file", args=[csv_id]))
   return render(request, 'upload.html')
+
+
+def list_files(request):
+  csv_files = CsvFile.objects.all()
+  for f in csv_files:
+    f.url = reverse("show_csv_file", args=[f.id])
+  context = {
+    "csv_files": csv_files
+  }
+  return render(request, "list_files.html", context=context)
 
 
 def show_csv_file(request, csv_id):
